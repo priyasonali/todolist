@@ -1,0 +1,12 @@
+{
+  "name": "todolist",
+  "homepage": "https://github.com/priyasonali/todolist",
+  "authors": [
+    "Sonali Priya <sonalipriya@outlook.com>",
+    "Santak Mishra <santakmishra@outlook.com>"
+  ],
+  "description": "A simple To-do list using AngularJS",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true
+}
