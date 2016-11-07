@@ -6,12 +6,34 @@
     <title>To-Do List</title>
     <!-- Authors: Sonali Priya, Sean Mishra -->
     <!-- Date: Nov 7, 2016 -->
-    <link rel="stylesheet" href="./less/style.less">
+    <link rel="stylesheet/less" type="text/css" href="./less/style.less">
     <!-- AngularJs at top for DOM manipulation -->
     <script src="./components/angular/angular.min.js" charset="utf-8"></script>
 </head>
 
 <body>
+
+    <header>
+        <h1 class="text-center">To-Do List</h1>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offet-3">
+                <select>
+                  <option>All Tasks</option>
+                  <option>Incomplete Tasks</option>
+                  <option>Complete Tasks</option>
+                </select>
+                <hr>
+                <input type="checkbox"> First Task<br>
+                <input type="checkbox"> Second Task<br>
+                <input type="checkbox"> Another Task<br>
+                <hr>
+                <input type="text" placeholder="New Task">
+            </div>
+        </div>
+    </main>
 
     <script src="./components/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="./components/less/dist/less.min.js" charset="utf-8"></script>
