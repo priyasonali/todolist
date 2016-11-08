@@ -1,4 +1,3 @@
-
 /*
  |--------------------------------------------------------------------------
  | Browser-sync config file
@@ -13,8 +12,8 @@
  |
  */
 module.exports = {
-	files: ['*.html','css/*.css','js/*.js'],
-	proxy: 'localhost',
-	port: 1337,
-	open: false
+    files: ['*.html', 'less/*.less', 'js/*.js'],
+    proxy: 'localhost',
+    port: 1337,
+    open: false
 };

@@ -19,24 +19,103 @@
 
     <main class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offet-3">
-                <select>
-                  <option>All Tasks</option>
-                  <option>Incomplete Tasks</option>
-                  <option>Complete Tasks</option>
-                </select>
-                <hr>
-                <input type="checkbox"> First Task<br>
-                <input type="checkbox"> Second Task<br>
-                <input type="checkbox"> Another Task<br>
-                <hr>
-                <input type="text" placeholder="New Task">
+            <div class="col-sm-12 col-md-6 col-md-offset-3">
+                <div class="row filter">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <select class="form-control">
+                          <option>All Tasks</option>
+                          <option>Incomplete Tasks</option>
+                          <option>Complete Tasks</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Task row starts -->
+                <div class="row task">
+                    <div class="col-sm-8">
+                        <div class="form-group checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                              <span class="taskTxt">First Task</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 schedule">
+                        <i class="fa fa-calendar"></i>
+                        <span class="">Nov 12, 2016</span>
+                    </div>
+                </div>
+                <!-- Task row ends -->
+
+                <!-- Task row starts -->
+                <div class="row task">
+                    <div class="col-sm-8">
+                        <div class="form-group checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                              <span class="taskTxt">Second longer Task</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 schedule">
+                        <i class="fa fa-calendar"></i>
+                        <span class="">Nov 10, 2016</span>
+                    </div>
+                </div>
+                <!-- Task row ends -->
+
+                <!-- Task row starts -->
+                <div class="row task">
+                    <div class="col-sm-8">
+                        <div class="form-group checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                              <span class="taskTxt text-danger">This task is due today!</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 schedule">
+                        <i class="fa fa-calendar"></i>
+                        <span class="">Nov 7, 2016</span>
+                    </div>
+                </div>
+                <!-- Task row ends -->
+
+                <!-- Task row starts -->
+                <div class="row task">
+                    <div class="col-sm-8">
+                        <div class="form-group checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                              No due date task
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 schedule">
+                        <i class="fa fa-calendar-plus-o"></i>
+                        <span class=""></span>
+                    </div>
+                </div>
+                <!-- Task row ends -->
+                <div class="row newTask">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <input class="form-control input-lg" type="text" placeholder="New Task">
+                    </div>
+                    <div class="col-sm-1">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
 
     <script src="./components/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="./components/less/dist/less.min.js" charset="utf-8"></script>
+    <script src="./components/font-awesome/" charset="utf-8"></script>
     <script src="./js/app.js" charset="utf-8"></script>
 </body>
 
