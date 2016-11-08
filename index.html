@@ -11,26 +11,34 @@
     <script src="./components/angular/angular.min.js" charset="utf-8"></script>
 </head>
 
-<body>
+<body ng-app="todoList">
 
     <header>
         <h1 class="text-center">To-Do List</h1>
     </header>
 
     <main class="container">
-        <div class="row">
+        <div class="row" ng-controller="ToDoListController as todoListCtrl">
             <div class="col-md-6 col-md-offet-3">
-                <select>
-                  <option>All Tasks</option>
-                  <option>Incomplete Tasks</option>
-                  <option>Complete Tasks</option>
+                <select name="dataType" ng-model="data.dataType">
+                  <option value="">All Tasks</option>
+                  <option value="Incomplete">Incomplete Tasks</option>
+                  <option value="Complete">Complete Tasks</option>
                 </select>
                 <hr>
-                <input type="checkbox"> First Task<br>
-                <input type="checkbox"> Second Task<br>
-                <input type="checkbox"> Another Task<br>
+                <div ng-repeat="todo in todoListCtrl.todos">
+                <input type="checkbox"> {{todo.description}} - {{todo.duedate}}<br>
+
+               </div>
+               <div>
+                <input type="checkbox" ng-show="todoListCtrl.todo.title"> {{todoListCtrl.todo.title}}
+
+               </div>
                 <hr>
-                <input type="text" placeholder="New Task">
+              <form name="newTask" class="form-horizontal" ng-submit="todoListCtrl.addTask()">
+                <input type="text" placeholder="New Task" id="title" ng-model="todoListCtrl.todo.title">
+                <button class="btn btn-primary">Submit</button>
+              </form>
             </div>
         </div>
     </main>
