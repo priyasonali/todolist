@@ -1,7 +1,111 @@
-/* Importing libraries */
+//Importing libraries
 @import "../components/bootstrap/less/bootstrap.less";
+@import "../components/font-awesome/less/font-awesome.less";
 
-/* Global variables */
+//Global variables
+@fa-font-path:"../components/font-awesome/fonts";
+@bgColor: #111;
+@txtColor: #eee;
+@baseFont: "Helvetica Neue", "Helvetica", sans-serif;
+@baseFontSize: 16px;
+@baseFontWidth: 300;
+@baseLetterSpacing: 2px;
 
-@bgColor = #111;
-@txtColor = #eee;
+//Layout
+
+body {
+  background-color: @bgColor;
+  color: @txtColor;
+  font-family: @baseFont;
+  font-size: @baseFontSize;
+  font-weight: @baseFontWidth;
+}
+
+p, label, input[type="text"] {
+  font: @baseFontWidth @baseFontSize @baseFont;
+  letter-spacing: @baseLetterSpacing;
+}
+
+.schedule {
+  padding-top: 7.5px;
+  i {
+    font-size: @baseFontSize * 1.2;
+    padding-right: 5px;
+  }
+}
+
+header {
+  margin-bottom: 60px;
+}
+
+.filter {
+  padding: 15px 0;
+  margin: 15px 0;
+  border-bottom: 3px solid #eee;
+  div {
+    padding: 0;
+  }
+}
+
+input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+.checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.checkbox .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.checkbox label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr {
+    opacity: .5;
+}
+
+input[type="checkbox"]:checked + span + span.taskTxt{
+  text-decoration: line-through;
+  color: lighten(@txtColor, 50%);
+}
+
+.fa-plus {
+  font-size: @baseFontSize * 1.5;
+  font-weight: 100;
+  padding-top: 10px;
+}
+
+.newTask {
+  margin-top: 15px;
+}
