@@ -97,7 +97,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked + span + span.taskTxt{
   text-decoration: line-through;
-  color: lighten(@txtColor, 50%);
+  color: fadeout(@txtColor, 50%);
 }
 
 .fa-plus {
@@ -108,4 +108,21 @@ input[type="checkbox"]:checked + span + span.taskTxt{
 
 .newTask {
   margin-top: 15px;
+}
+
+.newTaskBtn {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 15px;
+  p {
+    font-size: @baseFontSize * 0.75;
+    font-weight: @baseFontWidth / 3;
+  }
 }
