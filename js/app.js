@@ -1,35 +1,37 @@
-(function(){
-'use strict';
+(function() {
+    'use strict';
 
-var a=angular.module('todoList', [])
-.controller('ToDoListController', function(){
-    this.todos=todos;
+    var a = angular.module('todoList', [])
+        .controller('ToDoListController', ["$scope", function($scope) {
+            $scope.todos = todos;
 
-    this.addTask= function(form){
-      todos.push(form);
-      this.todo.title='';
-    }
-});
+            $scope.addTask = function(form) {
+                let task = {};
+                task.description = $scope.todo.title;
+                task.duedate = "";
+                task.status = "Incomplete";
+                todos.push(task);
+                $scope.todo.title = '';
+            };
+        }]);
 
 
 
-  var todos = [
-    {
-      description: 'Work on PHP',
-      duedate: '12/23/2016',
-      status: 'Incomplete'
-    },{
-      description: 'Start Drupal',
-      duedate: '11/11/2016',
-      status: 'Incomplete'
-    },{
-      description: 'Complete Angular.js',
-      duedate: '10/03/2016',
-      status: 'Complete'
-    },{
-      description: 'Start looking for job',
-      duedate: '10/10/2015',
-      status: 'Complete'
-    }
-];
+    var todos = [{
+        description: 'Work on PHP',
+        duedate: '12/23/2016',
+        status: 'Incomplete'
+    }, {
+        description: 'Start Drupal',
+        duedate: '11/11/2016',
+        status: 'Incomplete'
+    }, {
+        description: 'Complete Angular.js',
+        duedate: '10/03/2016',
+        status: 'Complete'
+    }, {
+        description: 'Start looking for job',
+        duedate: '10/10/2015',
+        status: 'Complete'
+    }];
 })();
