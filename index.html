@@ -23,16 +23,15 @@
             <div class=" col-sm-12 col-md-6 col-md-offset-3">
                 <div class="row filter">
                     <div class="col-sm-4 col-sm-offset-8">
-                        <select class="form-control" name="dataType" ng-model="data.dataType">
-                          <option value="">All Tasks</option>
-                          <option value="Incomplete">Incomplete Tasks</option>
-                          <option value="Complete">Complete Tasks</option>
+                        <select class="form-control" name="dropChange" ng-model="dropValue">
+                          <option ng-selected="true" value="">All Tasks</option>
+                          <option value="new">Incomplete Tasks</option>
+                          <option value="done">Complete Tasks</option>
                         </select>
                     </div>
                 </div>
-
                 <!-- Task row starts -->
-                <div class="row task" ng-repeat="todo in todos">
+                <div class="row task" ng-repeat="todo in validTodos | filter:{status:dropValue}">
                     <div class="col-sm-8">
                         <div class="form-group checkbox">
                             <label>
