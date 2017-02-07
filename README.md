@@ -1,3 +1,3 @@
 # To-do List
 
-A to-do list app made using angular.js.
+A simple to-do list. Developed using Angujar.js.
